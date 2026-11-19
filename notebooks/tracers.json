@@ -1,0 +1,42 @@
+[
+  {
+    "name": "SDSS main galaxies",
+    "where": "(s.legacy_target1 & dbo.fPrimTarget('GALAXY')) > 0 AND s.class = 'GALAXY'",
+    "z_min": 0.01,
+    "z_max": 0.25,
+    "color": "#F0E442",
+    "size": 0.15
+  },
+  {
+    "name": "BOSS luminous red galaxies",
+    "where": "s.survey = 'boss' AND s.sourceType = 'LRG' AND s.class = 'GALAXY'",
+    "z_min": 0.15,
+    "z_max": 0.8,
+    "color": "#E69F00",
+    "size": 0.15
+  },
+  {
+    "name": "eBOSS luminous red galaxies",
+    "where": "s.survey = 'eboss' AND s.sourceType = 'LRG' AND s.class = 'GALAXY'",
+    "z_min": 0.6,
+    "z_max": 1.0,
+    "color": "#CC79A7",
+    "size": 0.4
+  },
+  {
+    "name": "eBOSS emission-line galaxies",
+    "where": "s.survey = 'eboss' AND s.sourceType = 'ELG' AND s.class = 'GALAXY'",
+    "z_min": 0.6,
+    "z_max": 1.1,
+    "color": "#009E73",
+    "size": 0.2
+  },
+  {
+    "name": "Quasars",
+    "where": "s.class = 'QSO'",
+    "z_min": 0.8,
+    "z_max": 3.5,
+    "color": "#56B4E9",
+    "size": 0.4
+  }
+]

@@ -1,0 +1,44 @@
+[project]
+name = "astro-databases"
+version = "0.1.0"
+description = "Teaching notebooks for querying the SDSS database from Python."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "astropy",
+    "cachetools",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "requests",
+    "scikit-image",
+    "SciServer",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel",
+    "jupyterlab",
+    "ruff",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+SciServer = { git = "https://github.com/sciserver/SciScript-Python", rev = "2081fc4cf04a23edfde146997264cc37e26ea3db", subdirectory = "py3" }
+
+[tool.ruff]
+line-length = 79
+target-version = "py39"
+src = ["notebooks"]
+
+[tool.ruff.lint]
+extend-select = ["E501", "W505"]
+
+[tool.ruff.lint.per-file-ignores]
+# The setup cell imports what the students' own solutions will use.
+"notebooks/assignments.ipynb" = ["F401"]
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 72

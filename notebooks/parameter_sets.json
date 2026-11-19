@@ -1,0 +1,72 @@
+{
+  "cone_search": {
+    "full": {
+      "radius": 60, "z_max": 0.06, "z_step": 0.002,
+      "member_z_min": 0.015, "member_z_max": 0.035,
+      "cutout_field": 12, "cutout_width": 512
+    },
+    "light": {
+      "radius": 20, "z_max": 0.06, "z_step": 0.002,
+      "member_z_min": 0.015, "member_z_max": 0.035,
+      "cutout_field": 12, "cutout_width": 256
+    }
+  },
+  "flag_examples": {
+    "full": {"radius": 10, "size": 5},
+    "light": {"radius": 10, "size": 5}
+  },
+  "scan_comparison": {
+    "full": {"spectra_radius": 60, "galaxy_radius": 10},
+    "light": {"spectra_radius": 60, "galaxy_radius": 10}
+  },
+  "htm_cover": {
+    "full": {"radius": 20},
+    "light": {"radius": 10}
+  },
+  "batch_job": {
+    "full": {"table": "main_galaxies", "z_max": 0.3, "z_step": 0.01},
+    "light": {"table": "main_galaxies", "z_max": 0.03, "z_step": 0.005}
+  },
+  "hubble_lemaitre_diagram": {
+    "full": {
+      "z_min": 0.01, "z_max": 0.15, "fit_z_min": 0.03, "fit_z_max": 0.08,
+      "min_frac_dev": 0.8, "sigma_edges": [160, 190, 230, 300],
+      "log_z_step": 0.05, "min_galaxies_per_step": 5
+    },
+    "light": {
+      "z_min": 0.03, "z_max": 0.06, "fit_z_min": 0.03, "fit_z_max": 0.06,
+      "min_frac_dev": 0.8, "sigma_edges": [160, 190, 230, 300],
+      "log_z_step": 0.05, "min_galaxies_per_step": 5
+    }
+  },
+  "hr_diagram": {
+    "full": {"min_parallax": 5, "min_parallax_over_error": 10},
+    "light": {"min_parallax": 20, "min_parallax_over_error": 10}
+  },
+  "random_gallery": {
+    "full": {"size": 15, "columns": 5, "width": 128, "z_min": 0.01, "z_max": 0.05},
+    "light": {"size": 5, "columns": 5, "width": 64, "z_min": 0.01, "z_max": 0.05}
+  },
+  "color_magnitude_gallery": {
+    "full": {
+      "z_min": 0.01, "z_max": 0.05,
+      "mag_min": -23.5, "mag_max": -16.5, "mag_step": 0.5,
+      "color_min": 0.1, "color_max": 1.0, "color_step": 0.1,
+      "min_count": 20, "width": 128
+    },
+    "light": {
+      "z_min": 0.01, "z_max": 0.05,
+      "mag_min": -23.0, "mag_max": -17.0, "mag_step": 1.0,
+      "color_min": 0.2, "color_max": 1.0, "color_step": 0.2,
+      "min_count": 20, "width": 64
+    }
+  },
+  "equatorial_slice": {
+    "full": {"dec_min": -2.5, "dec_max": 2.5, "z_min": 0.01, "z_max": 0.15},
+    "light": {"dec_min": -0.5, "dec_max": 0.5, "z_min": 0.01, "z_max": 0.15}
+  },
+  "multi_tracer_wedge": {
+    "full": {"dec_min": -2.5, "dec_max": 2.5},
+    "light": {"dec_min": -0.25, "dec_max": 0.25}
+  }
+}
